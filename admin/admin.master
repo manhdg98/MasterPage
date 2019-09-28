@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+          font-family: sans-serif;
+          font-size: 15px;
+        }
+        #menu 
+        {
+            width : 17%;
+            float: left;
+        }
+        #menu ul {
+          background: #8AD385;
+          width: 250px;
+          padding: 0;
+          list-style-type: none;
+          text-align: left;
+        }
+        #menu li {
+          width: auto;
+          height: 40px;
+          line-height: 40px;
+          border-bottom: 1px solid #e8e8e8;
+          padding: 0 1em;
+        }
+        #menu li a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          display: block;
+        }
+        #menu li:hover {
+          background: #CDE2CD;
+        }
+        .content 
+        {
+            width : 83%;
+            float:left;
+        }
+        .den 
+        {
+            width : 100%;
+            height: 50px;
+            background: black;
+        }
+        .den input{ height: 30px;
+                    line-height: 30px;
+                    
+                     border-radius: 8px;
+                     margin-right: 40px;
+                     }
+        .noidung { float: right;}
+        .noidung button { margin-right: 20px;}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div id="menu">
+            <img src="../img/logo.PNG" />
+            <div class="menu">
+                 <ul>
+                     <li><a href="QuanlyPhim.aspx">Quản lý Phim</a></li>
+                     <li><a href="qlrap.aspx">Quản lý Rạp</a></li>
+                     <li><a href="qlgiave.aspx">Quản lý Giá vé</a></li>
+                     <li><a href="qllichchieu.aspx">Quản lý Lịch Chiếu</a></li>
+                     <li><a href="qlthanhvien.aspx">Quản lý thành viên</a></li>
+                     <li><a href="quanlytintucvauudai.aspx">Quản lý tin tức và ưu đãi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="den">
+                   <div class="noidung">
+                        <input type="text" placeholder=".. Tìm kiếm"/> 
+                <button> Quản lý</button>
+                    </div>
+                
+            </div>
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <img src="../img/footer.PNG" alt="Alternate Text" style="width: 100%;" />
+        </div>
+   
+    </div>
+    </form>
+</body>
+</html>

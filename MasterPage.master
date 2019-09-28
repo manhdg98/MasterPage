@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .dautrang 
+        {
+            background : black;
+            color : White;
+            text-align : right;
+            height: 50px;
+            line-height: 50px;
+            padding-right: 50px;
+        }
+        .menu 
+        {
+            margin-bottom: 50px;   
+        }
+        .menu li { width :150px; float: left; list-style : none; background: #56b3fb;
+                   margin-left: 10px;
+                   text-align: center;
+                   height : 40px;
+                   line-height : 40px;
+                   border-radius: 8px;
+                   }
+                     .menu li:hover { background: yellow; transition : 1s;}
+                     .menu li:hover a { color: black;}
+        .menu a
+        {   
+            padding : 15px;
+            text-decoration: none;
+            font-style : uppercase;
+        }
+        .container 
+        {
+            width: 100%;
+        }
+        footer img 
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+     <form id="form1" runat="server">
+    <div class="container">
+            <header>
+              
+              <div class="dautrang">  <a href="frmdangnhap.aspx">Đăng nhập</a> | <a href="frmdangky.aspx">Đăng ký 
+                    
+                  </a> </div>
+                  <img src="img/logo.png" style="height: 121px; width: 209px"/>
+                  <img src="https://files.betacorp.vn/files/ecm/2019/09/24/1702x621-1-214712-240919-60.jpg" style="width: 1358px; height: 130px;"">
+                  <div class="menu">
+                      <li><a href="lichchieu.aspx">Lịch chiếu</a> </li>
+                      <li><a href="phim.aspx">Phim</a> </li>
+                        <li><a href="rap.aspx">Rạp</a> </li>
+                     <li> <a href="Giave.aspx">Giá vé</a> </li>
+                      <li><a href="tinmoivauudai.aspx">Tin mới và ưu đãi </a></li> 
+                      <li><a href="thanhvien.aspx">Thành viên</a></li>
+                  </div>
+             </header>
+        <!--==================================-->
+            <section id="content" >
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        
+                 
+                </asp:ContentPlaceHolder> 
+            </section>
+        <!--==================================-->
+            <footer style="margin-top: 60px;"> 
+                  <img src="img/footer.png"/>
+            </footer>
+    </div>
+    </form>
+</body>
+</html>
